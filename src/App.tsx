@@ -1,8 +1,8 @@
-import { Cabecalho } from "./components/Cabecalho";
+import Principal from "./pages/Principal";
 
 export default function App() {
   return (
-  <>Cabecalho</>
+    <Principal/>
   );
   }
   
