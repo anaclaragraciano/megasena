@@ -35,6 +35,7 @@ export default function Principal() {
         <Cabecalho numero={concurso.numero} dataApuracao={concurso.dataApuracao}/>
         {concurso.acumulado && <Acumulado/>}
         <Local localSorteio={concurso.localSorteio} nomeMunicipioUFSorteio={concurso.nomeMunicipioUFSorteio}/>
+        <Circulo listaDezenas [] = {concurso.listaDezenas[0]}  listaDezenas [1] = {concurso.listaDezenas[2]} />  
         </>
     );
 

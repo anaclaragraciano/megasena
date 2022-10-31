@@ -1,5 +1,12 @@
-import { BoxSld } from "./styles";
+import { HTMLAttributes } from "react";
+import { CirculoSld } from "./styles";
 
-export function Circulo({}){
-    return <BoxSld>01</BoxSld>
+type Props = HTMLAttributes<HTMLElement> & {
+    listaDezenas: string[]
+}
+
+export function Circulo({listaDezenas}: Props){ //precisamos tipar o objeto
+    return (
+    <CirculoSld> {listaDezenas} </CirculoSld>
+    );
 }
