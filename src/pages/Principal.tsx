@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Acumulado } from "../components/Acumulado";
 import { Cabecalho } from "../components/Cabecalho";
 import { Circulo } from "../components/Circulo";
+import { Concurso } from "../components/Concurso";
 import { Local } from "../components/Local";
 
 
@@ -17,11 +18,6 @@ export default function Principal() {
             async function () {
                 const numero = Math.floor(Math.random() * 2533);
                 const concurso: Props = await services.get(numero);
-                //const dataApuracao:  Props = await services.get(numero);
-                //const localSorteio:  Props = await services.get(numero);
-                //const nomeMunicipioUFSorteio:  Props = await services.get(numero);
-                //const acumulado:  Props = await services.get(numero);
-                //const listaDezenas:  Props = await services.get(numero);
                 setConcurso(concurso);
             }
         )()
@@ -35,7 +31,8 @@ export default function Principal() {
         <Cabecalho numero={concurso.numero} dataApuracao={concurso.dataApuracao}/>
         {concurso.acumulado && <Acumulado/>}
         <Local localSorteio={concurso.localSorteio} nomeMunicipioUFSorteio={concurso.nomeMunicipioUFSorteio}/>
-        <Circulo listaDezenas [] = {concurso.listaDezenas[0]}  listaDezenas [1] = {concurso.listaDezenas[2]} />  
+        <Circulo listaDezenas={concurso.listaDezenas} />
+        <Concurso  dataProximoConcurso={concurso.dataProximoConcurso} valorEstimadoProximoConcurso={concurso.valorEstimadoProximoConcurso}/> 
         </>
     );
 

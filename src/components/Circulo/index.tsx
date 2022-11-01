@@ -1,12 +1,16 @@
 import { HTMLAttributes } from "react";
-import { CirculoSld } from "./styles";
+import { DezenaSld, SorteioSld } from "./styles";
 
-type Props = HTMLAttributes<HTMLElement> & {
-    listaDezenas: string[]
+
+type Props = HTMLAttributes <HTMLElement>&{
+    listaDezenas: string [];
+    
 }
 
-export function Circulo({listaDezenas}: Props){ //precisamos tipar o objeto
-    return (
-    <CirculoSld> {listaDezenas} </CirculoSld>
-    );
+export function Circulo({listaDezenas}:Props){
+    return <SorteioSld>
+        {listaDezenas?.map(dezena =>(
+            <DezenaSld key={dezena}>{dezena}</DezenaSld>
+        ))}
+    </SorteioSld>;
 }
