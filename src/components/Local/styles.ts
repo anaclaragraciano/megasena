@@ -2,5 +2,5 @@ import styled from "styled-components";
 
 export const LocalSld = styled.div` //css puro
     font-size: 18px;
-    color: #aaa;
+    color: ${props => props.theme.localColor};
 `;

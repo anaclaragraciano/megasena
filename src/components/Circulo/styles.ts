@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const SorteioSld = styled.div`
     font-size:20px;
-    color: #fff;
+    color: ${props => props.theme.sorteioColor};
 `
 
 export const DezenaSld = styled.div`
         height: 40px;
         width: 40px;
-        background: #209869;
+        background: ${props => props.theme.ciculoColor};
         border-radius: 50%;
         align-items: center;
         display: inline-flex;

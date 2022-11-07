@@ -8,7 +8,7 @@ export const BordaSld = styled.div`
 
 export const DataSld = styled.div`
     font-size: .9rem;
-    color ##4c546d;
+    color: ${props => props.theme.dataColor};
     display: flex;
     align-items: flex-end;
     padding-bottom: 3px;
@@ -17,7 +17,7 @@ export const DataSld = styled.div`
 
 export const ValorestimadoSld = styled.div`
     font-size:  2.2rem;
-    color #4c556c;
+    color: ${props => props.theme.valorestimadoColor};
     display: flex;
     align-items: flex-end;
     padding-bottom: 3px;

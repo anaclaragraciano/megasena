@@ -8,14 +8,14 @@ export const WrapperSld = styled.div` //a variavel recebe uma .div a direita do 
 
 export const ResultadoSld = styled.div` //css puro
     font-size: 30px;
-    color: #0066b3;
+    color: ${props => props.theme.resultadoColor};
     font-weight: bold;
     align-items: flex-end;
 `;
 
 export const ConcursoSld = styled.div` //css puro
     font-size: 20px;
-    color: #aaa;
+    color: ${props => props.theme.concursoColor};
     display: flex;
     align-items: flex-end;
     padding-bottom:3px;

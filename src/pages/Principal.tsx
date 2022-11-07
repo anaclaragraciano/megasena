@@ -7,6 +7,7 @@ import { Local } from "../components/Local";
 
 
 import services from "../services";
+import { dark, light } from "../styles/theme";
 import { Props } from "../types";
 
 export default function Principal() {
@@ -36,4 +37,11 @@ export default function Principal() {
         </>
     );
 
+}
+export const AuthProvider = ({ children }: any) => {
+    const [theme, setTheme] = useState(light);
+  
+    const toggleTheme = () => {
+      setTheme(theme.title === "light" ? dark : light);
+    };
 }
